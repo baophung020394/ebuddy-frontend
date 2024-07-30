@@ -25,3 +25,9 @@
    ```sh
    cp npm run dev
    ```
+
+4. Endpoint:
+
+   ```sh
+   cp http://localhost:4001/signup
+   ```
