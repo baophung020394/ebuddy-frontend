@@ -29,5 +29,5 @@
 4. Endpoint:
 
    ```sh
-   cp http://localhost:4001/signup
+   cp http://localhost:4500/signup
    ```
