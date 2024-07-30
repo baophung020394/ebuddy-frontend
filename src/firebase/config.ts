@@ -1,6 +1,6 @@
 import { getApp, getApps, initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-// import { getFirestore } from "firebase/firestore";
+
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
@@ -12,19 +12,6 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-console.log("!getApps().length", getApps().length);
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 const auth = getAuth(app);
-// const db = getFirestore(app);
-
-// let analytics;
-// if (typeof window !== "undefined" && window.navigator) {
-//   const { getAnalytics, isSupported } = require("firebase/analytics");
-//   isSupported().then((supported: boolean) => {
-//     if (supported) {
-//       analytics = getAnalytics(app);
-//     }
-//   });
-// }
-// export default app;
 export { app, auth };
